@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:tns="Examples" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" expressionLanguage="http://www.w3.org/1999/XPath" id="m1539757531057" name="" targetNamespace="Examples" typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <process id="oneTaskProcess" isClosed="false" name="The One Task Process" processType="None">
+    <startEvent id="theStart"/>
+    <sequenceFlow id="flow1" sourceRef="theStart" targetRef="theTask"/>
+    <userTask activiti:assignee="${user}" activiti:exclusive="true" id="theTask" name="my task"/>
+    <sequenceFlow id="flow2" sourceRef="theTask" targetRef="theEnd"/>
+    <endEvent id="theEnd"/>
+  </process>
+</definitions>
