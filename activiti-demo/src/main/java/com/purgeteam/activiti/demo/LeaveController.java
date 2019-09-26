@@ -8,11 +8,13 @@ import java.util.Map;
 import javax.annotation.Resource;
 import org.activiti.engine.HistoryService;
 import org.activiti.engine.ProcessEngine;
+import org.activiti.engine.RepositoryService;
 import org.activiti.engine.RuntimeService;
 import org.activiti.engine.TaskService;
 import org.activiti.engine.history.HistoricProcessInstance;
 import org.activiti.engine.runtime.ProcessInstance;
 import org.activiti.engine.task.Task;
+import org.activiti.image.ProcessDiagramGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.CollectionUtils;
@@ -33,13 +35,27 @@ public class LeaveController {
   public static final Logger log = LoggerFactory.getLogger(LeaveController.class);
 
   @Resource
+  private ProcessEngine processEngine;
+
+  /** 流程定义和部署相关的存储服务 */
+  @Resource
+  private RepositoryService repositoryService;
+
+  /** 流程运行时相关的服务 */
+  @Resource
   private RuntimeService runtimeService;
 
+  /** 节点任务相关操作接口 */
   @Resource
   private TaskService taskService;
 
+  /** 流程图生成器 */
   @Resource
-  private ProcessEngine processEngine;
+  private ProcessDiagramGenerator processDiagramGenerator;
+
+  /** 历史记录相关服务接口 */
+  @Resource
+  private HistoryService historyService;
 
   /**
    * 启动流程

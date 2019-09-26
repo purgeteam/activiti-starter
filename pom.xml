@@ -6,6 +6,8 @@
   <packaging>pom</packaging>
   <modules>
     <module>activiti-demo</module>
+    <module>activiti-ui</module>
+    <module>activiti7-springboot-demo</module>
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>
