@@ -1,4 +1,4 @@
-# Springboot2.1.x给Activiti7配置单独数据源问题
+# Springboot2.1.x配置Activiti7单独数据源问题
 ## 简介
 
 最近基于最新的`Activiti7`配置了`SpringBoot2`。
