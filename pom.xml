@@ -8,6 +8,7 @@
     <module>activiti-demo</module>
     <module>activiti-ui</module>
     <module>activiti7-springboot-demo</module>
+    <module>activiti7-cloud-springboot-demo</module>
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>
