@@ -18,6 +18,7 @@ import org.activiti.spring.boot.process.validation.AsyncPropertyValidator;
 import org.activiti.validation.ProcessValidatorImpl;
 import org.activiti.validation.validator.ValidatorSet;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
@@ -50,7 +51,7 @@ public class ActivitiConfig extends AbstractProcessEngineAutoConfiguration {
       @Autowired(required = false) DefaultActivityBehaviorFactoryMappingConfigurer processEngineConfigurationConfigurer,
       @Autowired(required = false) List<ProcessEngineConfigurator> processEngineConfigurators,
       UserGroupManager userGroupManager,
-      DataSource dataSource) throws IOException {
+      @Qualifier("activitiDataSource") DataSource dataSource) throws IOException {
 
     SpringProcessEngineConfiguration conf = new SpringProcessEngineConfiguration();
     conf.setConfigurators(processEngineConfigurators);
