@@ -11,19 +11,19 @@ import lombok.Data;
 @Data
 public class DemoEntity {
 
-  private String userId;
-  /**
-   * 姓名
-   */
-  private String name;
+    private String userId;
+    /**
+     * 姓名
+     */
+    private String name;
 
-  /**
-   * 年龄
-   */
-  private Integer age;
+    /**
+     * 年龄
+     */
+    private Integer age;
 
-  /**
-   * 爱好
-   */
-  private String hobby;
+    /**
+     * 爱好
+     */
+    private String hobby;
 }

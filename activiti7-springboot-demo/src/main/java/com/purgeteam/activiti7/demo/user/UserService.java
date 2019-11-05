@@ -1,6 +1,7 @@
 package com.purgeteam.activiti7.demo.user;
 
 import javax.annotation.Resource;
+
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,7 +14,7 @@ public class UserService {
 //  @Resource
 //  private IdentityService identityService;
 
-  public void test() {
+    public void test() {
 //    //项目中每创建一个新用户，对应的要创建一个Activiti用户
 //    //两者的userId和userName一致
 //    User admin=identityService.newUser("1");
@@ -27,5 +28,5 @@ public class UserService {
 //
 //    //用户与用户组关系绑定
 //    identityService.createMembership("1","1");
-  }
+    }
 }
